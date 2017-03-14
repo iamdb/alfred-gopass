@@ -1,3 +1,7 @@
+# NOTE
+
+Original credit goes to [CGenie](https://github.com/CGenie/alfred-pass). This fork only has modifications to my liking.
+
 # Alfred 2 integration with Pass
 
 [Packal page](http://www.packal.org/workflow/pass-0)
