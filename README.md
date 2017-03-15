@@ -1,6 +1,18 @@
 # NOTE
 
-Original credit goes to [CGenie](https://github.com/CGenie/alfred-pass). This fork only has modifications to my liking.
+Original credit goes to [CGenie](https://github.com/CGenie/alfred-pass) and [vshl](https://github.com/vshl/alfred-pass). This fork only has modifications to my liking, including:
+
+1. Transient copy of password, so that clipboard managers do not store the passwords ([vshl](https://github.com/vshl/alfred-pass)).
+
+2. Notification after the password is copied ([vshl](https://github.com/vshl/alfred-pass)).
+
+3. Commands `pass`, `user` and `link` to retrieve either the password, username or link of the entry. My password manager entries have the following format:
+```
+Password
+Username
+URL
+Grouping / Name
+```
 
 # Alfred 2 integration with Pass
 
