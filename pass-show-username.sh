@@ -1,19 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
-QUERY=$1
-PATH=/usr/local/bin:$PATH
-
-# GPG agent
-envfile="$HOME/.gnupg/gpg-agent.env"
-if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
-    eval "$(cat "$envfile"); export GPG_AGENT_INFO"
-else
-    eval "$(gpg-agent --daemon --write-env-file "$envfile")"
-fi
+QUERY=${1}
+PATH=/usr/local/bin:${HOME}/.bin:${PATH}
 
 # PASS
-pass show $QUERY | awk 'BEGIN{ORS=""} NR==2 {print; exit}'
-# pass show -c $QUERY
-
+gopass show ${QUERY} | sed -n 's/login: \(.*\)/\1/p' | tr -d '\n'

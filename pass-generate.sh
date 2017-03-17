@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
-QUERY=$1
-PATH=/usr/local/bin:$PATH
+QUERY=${1}
+PATH=/usr/local/bin:${HOME}/.bin:${PATH}
 
-pass generate "$QUERY" -n 20 -c 
+gopass generate "${QUERY}" -n 20 -c
