@@ -248,6 +248,8 @@
 				<dict>
 					<key>input</key>
 					<string>{query}</string>
+					<key>type</key>
+					<string>Password</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -350,7 +352,7 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Password copied</string>
+				<string>{var:type} copied</string>
 				<key>title</key>
 				<string>{var:input}</string>
 			</dict>
@@ -411,6 +413,8 @@
 				<dict>
 					<key>input</key>
 					<string>{query}</string>
+					<key>type</key>
+					<string>Username</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -495,6 +499,8 @@
 				<dict>
 					<key>input</key>
 					<string>{query}</string>
+					<key>type</key>
+					<string>Link</string>
 				</dict>
 			</dict>
 			<key>type</key>
